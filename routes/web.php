@@ -7,4 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
  
-Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('/demo', [UserController::class, 'show']);
+Route::get('/colorGame', [UserController::class, 'color']);
+Route::get('/rashi', [UserController::class, 'rashi']);
+Route::get('/numbergame', [UserController::class, 'numbergame']);
