@@ -33,14 +33,14 @@
 <body>
   <div class="container">
     <h2 class="text-center mb-4">Login</h2>
-    <form>
+    <form method="GET" action="login">
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter username">
+        <input type="text" class="form-control" id="username" name="name" placeholder="Enter username">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-login">Login</button>
     </form>
@@ -48,7 +48,15 @@
       <p>Don't have an account? <a href="#">Register now</a></p>
     </div>
     <a  class="btn btn-primary btn-block btn-login" href="{% url 'home' %}">For Demo</a>
-
+    <div>
+      <?php
+        if(isset($message)) {
+      ?>
+      <p class="text-center text-danger">
+      {{ $message }}
+      </p>
+      <?php } ?>    
+    </div>
   </div>
 
   <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->

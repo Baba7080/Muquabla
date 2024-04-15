@@ -42,10 +42,10 @@
     <h1 id="muqabla">Welcome to <span class="highlight">Muqabla</span>  Games Collection</h1>
     <div class="row mt-5">
       <div class="col-md-6">
-        <a class="btn btn-primary btn-lg btn-game" href="{% url "number" %}">Number Game</a>
+        <a class="btn btn-primary btn-lg btn-game" href="numbergame">Number Game</a>
       </div>
       <div class="col-md-6">
-        <a class="btn btn-info btn-lg btn-game" href="{% url "rashi" %}">Rashi Game</a>
+        <a class="btn btn-info btn-lg btn-game" href="rashi">Rashi Game</a>
       </div>
         
     </div>
@@ -54,7 +54,7 @@
         <button class="btn btn-warning btn-lg btn-game">Alphabet Game</button>
       </div>
       <div class="col-md-6">
-        <a class="btn btn-info btn-lg btn-game" href="{% url "color" %}">Color Game</a>
+        <a class="btn btn-info btn-lg btn-game" href="colorgame">Color Game</a>
       </div>
     </div>
 
