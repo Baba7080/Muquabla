@@ -20,8 +20,7 @@ class UserController extends Controller
     }
 
     public function login(Request $request){
-        $user = User::where('name', "Abhishek")->first();
-
+        $user = User::where('user_name', $request->user_name)->first();
         if (!$user) {
             // User not found
             $message = "User not found";
@@ -29,7 +28,7 @@ class UserController extends Controller
         }
 
         // Verify the password
-        if (password_verify($_GET['password'], $user->password)) {
+        if (password_verify($request->password, $user->password)) {
 
             // Password matches, authenticate user
             // Implement your authentication logic here (e.g., setting session, redirecting)
@@ -46,7 +45,8 @@ class UserController extends Controller
     public function rashi(){
         return view('rashi');
     }
-    public function numbergame(){
-        return view('numbergame');
+    public function numbergame(Request $request){
+        $user = $request->session()->get('user');
+        return view('numbergame')->with('user', $user);
     }
 }

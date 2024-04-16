@@ -13,11 +13,23 @@
     }
     .container {
       max-width: 400px;
-      margin: 100px auto;
+      margin-top: 150px; /* Adjusted margin top */
+      margin-bottom: 100px;
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.5s ease-out; /* Fade in animation */
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .btn-login {
       background-color: #007bff;
@@ -31,12 +43,22 @@
   </style>
 </head>
 <body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="elementor-widget-container navbar-brand">
+        <img width="200px" height="50" style="height: 155px;" alt="Muqabla " src="{{ asset('logonumber.png') }}"/>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
   <div class="container">
     <h2 class="text-center mb-4">Login</h2>
     <form method="GET" action="login">
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="name" placeholder="Enter username">
+        <input type="text" class="form-control" id="username" name="user_name" placeholder="Enter username">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
