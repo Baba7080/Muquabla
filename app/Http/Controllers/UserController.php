@@ -49,4 +49,8 @@ class UserController extends Controller
         $user = $request->session()->get('user');
         return view('numbergame')->with('user', $user);
     }
+    public function alphabetgame(Request $request){
+        $user = $request->session()->get('user');
+        return view('alphabetgame')->with('user', $user);
+    }
 }

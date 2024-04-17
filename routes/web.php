@@ -11,6 +11,7 @@ Route::get('/demo', [UserController::class, 'show']);
 Route::get('/colorGame', [UserController::class, 'color']);
 Route::get('/rashi', [UserController::class, 'rashi']);
 Route::get('/numbergame', [UserController::class, 'numbergame']);
+Route::get('/alphabetgame', [UserController::class, 'alphabetgame']);
 
 
 Route::post('/submitAmount', [GameController::class, 'submitAmount']);

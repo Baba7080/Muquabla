@@ -51,7 +51,7 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <button class="btn btn-warning btn-lg btn-game">Alphabet Game</button>
+        <button class="btn btn-warning btn-lg btn-game" href="alphabetgame">Alphabet Game</button>
       </div>
       <div class="col-md-6">
         <a class="btn btn-info btn-lg btn-game" href="colorgame">Color Game</a>
